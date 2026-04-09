@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+    
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    
+    --color-navy-900: #0A192F;
+    --color-navy-800: #112240;
+    --color-gold-500: #F59E0B;
+    --color-gold-600: #D97706;
+}
+
+:root {
+    --background: oklch(1 0 0);
+    --foreground: #0A192F;
+    --card: oklch(1 0 0);
+    --card-foreground: #0A192F;
+    --popover: oklch(1 0 0);
+    --popover-foreground: #0A192F;
+    
+    /* Deep Navy Primary */
+    --primary: #0A192F;
+    --primary-foreground: #FFFFFF;
+    
+    --secondary: #F1F5F9;
+    --secondary-foreground: #0A192F;
+    
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+    
+    /* Gold/Amber Accent */
+    --accent: #F59E0B;
+    --accent-foreground: #0A192F;
+    
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+    --ring: #0A192F;
+    
+    --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+.section-padding {
+  @apply py-20 md:py-32;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
