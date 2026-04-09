@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     question: "Are you licensed and insured?",
-    answer: "Yes, Elite Painters is fully licensed and carries comprehensive general liability and workers' compensation insurance. We are happy to provide certificates of insurance upon request."
+    answer: "Yes, Delgados Painting is fully licensed and carries comprehensive general liability and workers' compensation insurance. We are happy to provide certificates of insurance upon request. Your peace of mind is our priority."
   },
   {
     question: "Do you offer a warranty on your work?",
@@ -49,11 +49,12 @@ export default function FAQ() {
             </p>
             <div className="pt-8">
               <div className="bg-primary p-8 rounded-3xl text-white space-y-4">
-                <h4 className="text-2xl font-heading font-bold">Still Need Help?</h4>
-                <p className="text-white/70">Our experts are ready to answer any specific questions about your project.</p>
-                <a href="tel:1-800-ELITE" className="block text-3xl font-heading font-bold text-accent hover:underline">
-                  (800) 555-0123
+                <h4 className="text-2xl font-heading font-bold">Ready to Get Started?</h4>
+                <p className="text-white/75">Our team is standing by to answer your questions and schedule your free consultation.</p>
+                <a href="tel:7145550123" className="block text-3xl font-heading font-bold text-accent hover:underline">
+                  (714) 555-0123
                 </a>
+                <p className="text-sm text-white/50">Mon–Sat, 8am–6pm</p>
               </div>
             </div>
           </div>

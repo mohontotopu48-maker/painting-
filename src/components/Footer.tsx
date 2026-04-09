@@ -15,16 +15,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand col */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 bg-[#F59E0B] rounded-lg flex items-center justify-center">
-                <span className="text-[#0A192F] font-bold font-heading">EP</span>
+            <div className="flex items-center gap-3">
+              <div className="w-11 h-11 bg-gradient-to-br from-[#F59E0B] to-[#D97706] rounded-xl flex items-center justify-center shadow-lg">
+                <span className="text-[#0A192F] font-bold font-heading text-lg">D</span>
               </div>
               <span className="font-heading font-bold text-2xl tracking-tight">
-                ELITE<span className="text-[#F59E0B]">PAINTERS</span>
+                Delgados<span className="text-[#F59E0B]">Painting</span>
               </span>
             </div>
-            <p className="text-white/55 leading-relaxed text-sm">
-              Orange County's #1 rated painting service. Premium residential &amp; commercial painting with 15+ years of excellence, transparency, and local pride.
+            <p className="text-white/60 leading-relaxed text-sm">
+              Orange County's premier painting service. Exceptional craftsmanship, reliability, and stunning transformations with 15+ years of excellence and local expertise.
             </p>
             {/* Stars */}
             <div className="flex items-center gap-2">
@@ -33,7 +33,7 @@ export default function Footer() {
                   <Star key={i} className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B]" />
                 ))}
               </div>
-              <span className="text-white/60 text-sm">4.9 · 500+ Reviews</span>
+              <span className="text-white/60 text-sm">4.9 out of 5 · 500+ Reviews</span>
             </div>
             <div className="flex gap-3">
               {[Facebook, Instagram, Youtube, Linkedin].map((Icon, i) => (
@@ -88,9 +88,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@elitepainters.com" className="flex items-start gap-3 hover:text-white transition-colors">
+                <a href="mailto:contact@delgadospainting.com" className="flex items-start gap-3 hover:text-white transition-colors">
                   <Mail className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
-                  hello@elitepainters.com
+                  contact@delgadospainting.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -110,7 +110,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/35 text-sm text-center md:text-left">
-            © 2026 Elite Painters LLC. All rights reserved. Licensed &amp; Insured · CSLB #1098234
+            © 2026 Delgados Painting. All rights reserved. Licensed &amp; Insured · CSLB #1098234
           </p>
           <div className="flex items-center gap-4">
             <a href="#" className="text-white/35 hover:text-white text-xs transition-colors">Privacy Policy</a>

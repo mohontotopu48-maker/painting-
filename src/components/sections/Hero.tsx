@@ -36,30 +36,30 @@ export default function Hero({ onOpenQuote }: HeroProps) {
             className="inline-flex items-center gap-2 bg-[#F59E0B]/20 border border-[#F59E0B]/40 px-5 py-2 rounded-full text-[#F59E0B] font-bold text-sm tracking-wide uppercase"
           >
             <Star className="w-4 h-4 fill-current" />
-            <span>Orange County's #1 Rated Painting Service</span>
+            <span>Orange County's Most Trusted Painting Experts</span>
           </motion.div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] tracking-tight">
-            Transform Your{' '}
+            Premium Painting<br />
             <span className="text-[#F59E0B] relative">
-              California Home
+              That Transforms
               <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 300 8" fill="none">
                 <path d="M0 6 Q75 0 150 4 Q225 8 300 2" stroke="#F59E0B" strokeWidth="3" strokeLinecap="round" fill="none" opacity="0.6"/>
               </svg>
             </span>{' '}
-            With Elite Craftsmanship
+            <span className="italic">Your Space</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-white/75 max-w-xl leading-relaxed">
-            Premium residential and commercial painting across Orange County. Precision, quality, and a flawless finish — guaranteed.
+            Delgados Painting brings exceptional artistry and quality craftsmanship to every project. From residential masterpieces to commercial transformations across Orange County.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
             <Button
               onClick={onOpenQuote}
-              className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A192F] font-bold py-7 px-10 text-xl shadow-2xl shadow-amber-500/30 rounded-xl group flex items-center gap-3"
+              className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A192F] font-bold py-7 px-10 text-xl shadow-2xl shadow-amber-500/40 rounded-xl group flex items-center gap-3 hover:scale-110 transition-all duration-300"
             >
-              Get Free Estimate
+              Get Your Free Estimate
               <motion.span
                 animate={{ x: [0, 5, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}

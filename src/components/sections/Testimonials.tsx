@@ -5,22 +5,22 @@ import { Card, CardContent } from '@/components/ui/card';
 const testimonials = [
   {
     name: 'Sarah Johnson',
-    role: 'Homeowner',
-    content: 'Elite Painters transformed our outdated living room into a modern masterpiece. Their attention to detail on the trim work was incredible. Highly recommend!',
+    role: 'Homeowner, Newport Beach',
+    content: 'Delgados Painting transformed our entire home! Their attention to detail, professionalism, and quality of work exceeded every expectation. We\'re recommending them to everyone we know.',
     rating: 5,
     image: 'https://i.pravatar.cc/150?u=sarah'
   },
   {
     name: 'Michael Chen',
-    role: 'Property Manager',
-    content: 'We use Elite for all our commercial properties. They are reliable, fast, and always leave the site spotless. Their pricing is fair and transparent.',
+    role: 'Commercial Property Manager',
+    content: 'Working with Delgados on multiple properties has been fantastic. They\'re reliable, efficient, and leave every site spotless. Outstanding pricing and communication throughout.',
     rating: 5,
     image: 'https://i.pravatar.cc/150?u=michael'
   },
   {
     name: 'Emily Rodriguez',
-    role: 'Real Estate Agent',
-    content: 'I always recommend Elite to my clients who are preparing to sell. Their exterior painting work adds massive curb appeal and value to every home.',
+    role: 'Real Estate Agent, Irvine',
+    content: 'I recommend Delgados Painting to all my clients. Their exterior work dramatically increases curb appeal and property value. Best investment my sellers can make!',
     rating: 5,
     image: 'https://i.pravatar.cc/150?u=emily'
   }
@@ -32,13 +32,13 @@ export default function Testimonials() {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
           <div className="inline-block bg-accent/10 text-accent px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">
-            Testimonials
+            Client Success Stories
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary">
-            What Our Clients Are Saying
+            Join 500+ Happy Delgados Customers
           </h2>
           <p className="text-lg text-muted-foreground">
-            Don’t just take our word for it. We pride ourselves on delivering 5-star service to every single customer.
+            See why homeowners and businesses across Orange County trust us for exceptional painting work and outstanding customer service.
           </p>
         </div>
 

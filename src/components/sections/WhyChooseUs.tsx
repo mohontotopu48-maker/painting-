@@ -62,13 +62,13 @@ export default function WhyChooseUs() {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
           <div className="inline-block bg-accent/10 text-accent px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">
-            The Elite Advantage
+            Why Delgados
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary">
-            Why Homeowners & Businesses <br /> Trust Elite Painters
+            What Makes Delgados<br /> Your Best Choice
           </h2>
           <p className="text-lg text-muted-foreground">
-            We’ve built our reputation on quality, reliability, and exceptional customer service. Here’s what sets us apart from the competition.
+            We don't just paint. We deliver exceptional craftsmanship, reliability, and results that exceed expectations every single time.
           </p>
         </div>
 

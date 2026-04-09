@@ -28,7 +28,7 @@ export default function About({ onOpenQuote }: AboutProps) {
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.5)] border-4 border-white/10">
               <img
                 src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop"
-                alt="Elite Painters Team at Work"
+                alt="Delgados Painting Professional Team"
                 className="w-full aspect-[4/3] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/60 to-transparent"></div>
@@ -66,14 +66,14 @@ export default function About({ onOpenQuote }: AboutProps) {
                 Our Story
               </div>
               <h2 className="text-4xl md:text-5xl font-heading font-bold leading-tight">
-                Orange County's Trusted Choice for{' '}
-                <span className="text-[#F59E0B]">Professional Integrity</span>
+                Orange County's <span className="text-[#F59E0B]">Premier Painting</span>
+                <br /> Partner
               </h2>
-              <p className="text-lg text-white/70 leading-relaxed">
-                Elite Painters was founded with a simple mission: provide Orange County homeowners and businesses with a painting service that prioritizes quality, transparency, and respect for your property.
+              <p className="text-lg text-white/75 leading-relaxed">
+                Delgados Painting was founded on a singular principle: deliver exceptional craftsmanship with uncompromising integrity. We serve Orange County's most discerning homeowners and businesses who demand excellence.
               </p>
-              <p className="text-lg text-white/70 leading-relaxed">
-                Your California property is your most valuable asset. That's why we don't just "paint" — we protect, enhance, and transform. Our team is made up of local OC craftsmen who take immense pride in their work and community.
+              <p className="text-lg text-white/75 leading-relaxed">
+                Your property deserves more than a fresh coat of paint—it deserves artistry, expertise, and a team that genuinely cares. That's what Delgados brings to every single project.
               </p>
             </div>
 

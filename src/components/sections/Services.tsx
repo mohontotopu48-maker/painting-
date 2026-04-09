@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 import { 
   Home, Building2, Paintbrush, Layers, Droplets, CheckCircle2, ArrowRight
 } from 'lucide-react';
@@ -12,36 +13,42 @@ interface ServicesProps {
 const services = [
   {
     title: 'Interior Painting',
+    slug: 'interior-painting',
     description: 'Flawless walls, ceilings, and trim. Premium low-VOC paints for a beautiful, healthy home that lasts.',
     icon: Paintbrush,
     image: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?q=80&w=2070&auto=format&fit=crop'
   },
   {
     title: 'Exterior Painting',
+    slug: 'exterior-painting',
     description: 'Protect and beautify your home with weather-resistant coatings that stand up to California sun and rain.',
     icon: Home,
     image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070&auto=format&fit=crop'
   },
   {
     title: 'Commercial Painting',
+    slug: 'commercial-painting',
     description: 'Professional solutions for offices, retail, and industrial spaces — minimal disruption, maximum impact.',
     icon: Building2,
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'
   },
   {
     title: 'Cabinet Painting',
+    slug: 'cabinet-refinishing',
     description: 'Give your kitchen a high-end designer look for a fraction of the cost of full cabinet replacement.',
     icon: Layers,
     image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2070&auto=format&fit=crop'
   },
   {
     title: 'Drywall & Wall Repair',
+    slug: 'drywall-repair',
     description: 'Expert patching, sanding, and texturing for a perfectly smooth surface before any paint is applied.',
     icon: CheckCircle2,
     image: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=2070&auto=format&fit=crop'
   },
   {
     title: 'Pressure Washing',
+    slug: 'pressure-washing',
     description: 'Deep cleaning for siding, decks, and driveways — prep your surface or just refresh your curb appeal.',
     icon: Droplets,
     image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=2070&auto=format&fit=crop'
@@ -49,6 +56,8 @@ const services = [
 ];
 
 export default function Services({ onOpenQuote }: ServicesProps) {
+  const navigate = useNavigate();
+
   return (
     <section id="services" className="section-padding bg-slate-50">
       <div className="container-custom">
@@ -65,7 +74,7 @@ export default function Services({ onOpenQuote }: ServicesProps) {
             </p>
           </div>
           <Button
-            onClick={onOpenQuote}
+            onClick={() => navigate('/services')}
             variant="outline"
             className="border-[#0A192F] text-[#0A192F] hover:bg-[#0A192F] hover:text-white font-bold h-14 px-8 shrink-0 transition-all"
           >
@@ -104,12 +113,12 @@ export default function Services({ onOpenQuote }: ServicesProps) {
                     {service.description}
                   </CardDescription>
                 </CardContent>
-                <CardFooter className="pt-0">
+                <CardFooter className="pt-0 flex gap-2">
                   <button
-                    onClick={onOpenQuote}
-                    className="flex items-center gap-2 font-bold text-[#0A192F] group-hover:text-[#F59E0B] transition-colors text-sm"
+                    onClick={() => navigate(`/services/${service.slug}`)}
+                    className="flex items-center gap-2 font-bold text-[#0A192F] group-hover:text-[#F59E0B] transition-colors text-sm flex-1"
                   >
-                    Get a Quote <ArrowRight className="w-4 h-4" />
+                    Learn More <ArrowRight className="w-4 h-4" />
                   </button>
                 </CardFooter>
               </Card>

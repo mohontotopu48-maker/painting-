@@ -34,10 +34,10 @@ export default function PromoBanner({ onOpenQuote }: PromoBannerProps) {
             </div>
 
             <h2 className="text-4xl md:text-6xl font-heading font-bold text-white leading-tight">
-              Get <span className="text-[#F59E0B]">15% OFF</span> Your First<br className="hidden md:block" /> Interior Painting Project
+              Transform Your Space<br className="hidden md:block" /> with <span className="text-[#F59E0B]">Delgados Painting</span>
             </h2>
-            <p className="text-xl text-white/65 max-w-2xl mx-auto leading-relaxed">
-              Book your free estimate this month and receive a complimentary professional color consultation — a <span className="text-white font-semibold">$150 value, free</span>.
+            <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+              Book your free estimate this month and receive expert color consultation—a <span className="text-white font-semibold">$150 value, absolutely free</span>. Limited time offer for new projects.
             </p>
           </motion.div>
 
@@ -50,22 +50,22 @@ export default function PromoBanner({ onOpenQuote }: PromoBannerProps) {
           >
             <button
               onClick={onOpenQuote}
-              className="inline-flex items-center justify-center gap-3 bg-[#F59E0B] hover:bg-[#D97706] text-[#0A192F] font-bold py-5 px-12 text-xl rounded-2xl shadow-2xl shadow-amber-400/20 transition-all hover:scale-105"
+              className="inline-flex items-center justify-center gap-3 bg-[#F59E0B] hover:bg-[#D97706] text-[#0A192F] font-bold py-5 px-12 text-xl rounded-2xl shadow-2xl shadow-amber-400/30 transition-all hover:scale-110"
             >
-              Claim Your 15% Discount
+              Get Your Free Estimate
               <ArrowRight className="w-5 h-5" />
             </button>
             <a
               href="tel:7145550123"
-              className="inline-flex items-center justify-center gap-3 border-2 border-white/20 text-white hover:bg-white/10 py-5 px-12 text-xl rounded-2xl backdrop-blur-sm transition-all font-bold"
+              className="inline-flex items-center justify-center gap-3 border-2 border-white/30 text-white hover:bg-white/10 py-5 px-12 text-xl rounded-2xl backdrop-blur-sm transition-all font-bold hover:border-white/60"
             >
               <Phone className="w-5 h-5 text-[#F59E0B]" />
-              (714) 555-0123
+              Call Now: (714) 555-0123
             </a>
           </motion.div>
 
-          <p className="text-white/35 text-xs font-medium uppercase tracking-widest mt-8 relative z-10">
-            *Offer valid for projects booked by April 30th, 2026. Minimum project size of 500 sq ft applies.
+          <p className="text-white/40 text-xs font-medium uppercase tracking-widest mt-8 relative z-10">
+            *Free estimate valid for projects booked by April 30th, 2026. Minimum project consultation applies.
           </p>
         </div>
       </div>

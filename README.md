@@ -1,6 +1,6 @@
-# Elite Painters - Premium Painting Services Website
+# Delgados Painting - Premium Orange County Painting Services
 
-A high-converting, modern lead-generation website for a professional painting service company. Built with React, Tailwind CSS, and shadcn/ui.
+A stunning, high-converting lead-generation website for Delgados Painting - Orange County's premier painting service. Built with React 19, Tailwind CSS v4, and shadcn/ui for maximum performance and user engagement.
 
 ## 🚀 Features
 
@@ -26,7 +26,7 @@ A high-converting, modern lead-generation website for a professional painting se
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/elite-painters.git
+   git clone https://github.com/your-username/delgados-painting.git
    ```
 
 2. Install dependencies:

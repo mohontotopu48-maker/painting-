@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Phone, Menu } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -10,6 +11,8 @@ interface NavbarProps {
 
 export default function Navbar({ onOpenQuote }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +23,11 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
   }, []);
 
   const navLinks = [
-    { name: 'Services', href: '#services' },
-    { name: 'Why Us', href: '#why-us' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Process', href: '#process' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Services', href: '/services', onClick: () => navigate('/services') },
+    { name: 'Why Us', href: '#why-us', onClick: () => location.pathname === '/' && document.getElementById('why-us')?.scrollIntoView({ behavior: 'smooth' }) },
+    { name: 'Projects', href: '#projects', onClick: () => location.pathname === '/' && document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }) },
+    { name: 'Process', href: '#process', onClick: () => location.pathname === '/' && document.getElementById('process')?.scrollIntoView({ behavior: 'smooth' }) },
+    { name: 'FAQ', href: '#faq', onClick: () => location.pathname === '/' && document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' }) },
   ];
 
   return (
@@ -35,27 +38,27 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
     >
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5">
-          <div className="w-10 h-10 bg-[#0A192F] rounded-lg flex items-center justify-center shadow-md">
-            <span className="text-[#F59E0B] font-bold text-lg leading-none">EP</span>
+        <button onClick={() => navigate('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer">
+          <div className="w-11 h-11 bg-gradient-to-br from-[#F59E0B] to-[#D97706] rounded-xl flex items-center justify-center shadow-lg font-heading font-black text-[#0A192F] text-xl leading-none hover:shadow-xl hover:scale-105 transition-all">
+            D
           </div>
           <span className={`font-heading font-bold text-xl tracking-tight ${isScrolled ? 'text-[#0A192F]' : 'text-[#0A192F]'}`}>
-            ELITE<span className="text-[#F59E0B]">PAINTERS</span>
+            Delgados<span className="text-[#F59E0B]">Painting</span>
           </span>
-        </a>
+        </button>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
-              className={`text-sm font-semibold transition-colors ${
+              onClick={link.onClick}
+              className={`text-sm font-semibold transition-colors cursor-pointer ${
                 isScrolled ? 'text-[#0A192F]/80 hover:text-[#F59E0B]' : 'text-white/90 hover:text-[#F59E0B]'
               }`}
             >
               {link.name}
-            </a>
+            </button>
           ))}
         </div>
 
@@ -97,22 +100,22 @@ export default function Navbar({ onOpenQuote }: NavbarProps) {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[360px] bg-white">
               <div className="flex flex-col gap-8 mt-12">
-                <div className="flex items-center gap-2.5 mb-4">
-                  <div className="w-10 h-10 bg-[#0A192F] rounded-lg flex items-center justify-center">
-                    <span className="text-[#F59E0B] font-bold leading-none">EP</span>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 bg-gradient-to-br from-[#F59E0B] to-[#D97706] rounded-xl flex items-center justify-center">
+                    <span className="text-[#0A192F] font-bold font-heading text-lg">D</span>
                   </div>
                   <span className="font-heading font-bold text-xl text-[#0A192F]">
-                    ELITE<span className="text-[#F59E0B]">PAINTERS</span>
+                    Delgados<span className="text-[#F59E0B]">Painting</span>
                   </span>
                 </div>
                 {navLinks.map((link) => (
-                  <a
+                  <button
                     key={link.name}
-                    href={link.href}
-                    className="text-xl font-heading font-semibold text-[#0A192F] hover:text-[#F59E0B] transition-colors border-b border-slate-100 pb-4"
+                    onClick={link.onClick}
+                    className="text-xl font-heading font-semibold text-[#0A192F] hover:text-[#F59E0B] transition-colors border-b border-slate-100 pb-4 text-left w-full"
                   >
                     {link.name}
-                  </a>
+                  </button>
                 ))}
                 <div className="flex flex-col gap-4 pt-4">
                   <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">Contact Us</p>

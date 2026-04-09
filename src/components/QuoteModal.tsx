@@ -30,10 +30,10 @@ export default function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
           </div>
           <DialogHeader>
             <DialogTitle className="text-3xl font-bold text-white leading-tight">
-              Get Your Free Estimate
+              Your Free Estimate Awaits
             </DialogTitle>
             <DialogDescription className="text-white/75 text-base mt-1">
-              Expert painting services. No obligation. Response within 2 hours.
+              Delgados Painting is here to help. No obligation. Response within 2 hours.
             </DialogDescription>
           </DialogHeader>
         </div>
@@ -81,9 +81,9 @@ export default function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
             />
           </div>
 
-          <Button className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-[#0A192F] font-bold py-6 text-lg shadow-xl shadow-amber-200 rounded-xl gap-2 mt-2">
+          <Button className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-[#0A192F] font-bold py-6 text-lg shadow-xl shadow-amber-200 rounded-xl gap-2 mt-2 hover:scale-105 transition-all">
             <Send className="w-4 h-4" />
-            Submit Request — It's Free!
+            Get Your Free Estimate Today
           </Button>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-slate-500 pt-1">

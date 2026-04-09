@@ -67,10 +67,10 @@ export default function Projects({ onOpenQuote }: ProjectsProps) {
             Our Portfolio
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#0A192F]">
-            Recent Transformations
+            Our Completed Projects
           </h2>
-          <p className="text-lg text-slate-500 leading-relaxed">
-            Real projects, real Orange County homes and businesses. See the Elite difference for yourself.
+          <p className="text-lg text-slate-600 leading-relaxed">
+            Real transformations from real Delgados Painting projects across Orange County. See the quality and artistry we bring to every home and business.
           </p>
         </motion.div>
 

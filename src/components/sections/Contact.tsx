@@ -9,7 +9,7 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Call Us',
+      title: 'Call Us Now',
       detail: '(714) 555-0123',
       sub: 'Mon–Fri 8am–6pm, Sat 9am–2pm',
       href: 'tel:7145550123',
@@ -17,9 +17,9 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email Us',
-      detail: 'hello@elitepainters.com',
+      detail: 'contact@delgadospainting.com',
       sub: 'We reply within 2 hours',
-      href: 'mailto:hello@elitepainters.com',
+      href: 'mailto:contact@delgadospainting.com',
     },
     {
       icon: MapPin,
@@ -48,10 +48,10 @@ export default function Contact() {
                 Contact Us
               </div>
               <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#0A192F]">
-                Ready to Start Your <br /><span className="text-[#F59E0B]">Next Project?</span>
+                Start Your <br /><span className="text-[#F59E0B]">Painting Journey</span>
               </h2>
-              <p className="text-lg text-slate-500 leading-relaxed">
-                Get in touch today for a free, no-obligation estimate. We're locally based in Orange County and respond within 2 hours during business hours.
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Get in touch with Delgados Painting for a free, no-obligation estimate. We're locally based in Orange County and committed to responding within 2 hours during business hours.
               </p>
             </div>
 
