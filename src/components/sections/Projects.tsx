@@ -32,7 +32,7 @@ const projects: Project[] = [
     title: 'Tech Campus Refresh',
     category: 'Commercial',
     location: 'Irvine, CA',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
     description: 'Industrial-style open office painting with custom accent walls and exposed ceiling work.'
   },
   {
@@ -40,7 +40,7 @@ const projects: Project[] = [
     title: 'Classic Coastal Refresh',
     category: 'Residential',
     location: 'Laguna Beach, CA',
-    image: 'https://images.unsplash.com/photo-1518605336397-885332d623dd?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070&auto=format&fit=crop',
     description: 'Restoration of historical trim and siding with a traditional Coastal color palette.'
   },
   {

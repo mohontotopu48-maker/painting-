@@ -20,13 +20,13 @@ const services = [
     title: 'Exterior Painting',
     description: 'Protect and beautify your home with weather-resistant coatings that stand up to California sun and rain.',
     icon: Home,
-    image: 'https://images.unsplash.com/photo-1518605336397-885332d623dd?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070&auto=format&fit=crop'
   },
   {
     title: 'Commercial Painting',
     description: 'Professional solutions for offices, retail, and industrial spaces — minimal disruption, maximum impact.',
     icon: Building2,
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'
   },
   {
     title: 'Cabinet Painting',
@@ -44,7 +44,7 @@ const services = [
     title: 'Pressure Washing',
     description: 'Deep cleaning for siding, decks, and driveways — prep your surface or just refresh your curb appeal.',
     icon: Droplets,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=2070&auto=format&fit=crop'
   }
 ];
 
