@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Linkedin, Phone, Mail, MapPin, ArrowUp, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Footer() {
@@ -6,94 +6,124 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const serviceAreas = ['Irvine', 'Newport Beach', 'Laguna Beach', 'Huntington Beach', 'Anaheim', 'Mission Viejo', 'Costa Mesa', 'San Clemente'];
+
   return (
-    <footer className="bg-primary text-white pt-20 pb-10">
+    <footer className="bg-[#0A192F] text-white pt-20 pb-8">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+        {/* Top grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Brand col */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-primary font-heading font-bold text-xl">E</span>
+            <div className="flex items-center gap-2.5">
+              <div className="w-10 h-10 bg-[#F59E0B] rounded-lg flex items-center justify-center">
+                <span className="text-[#0A192F] font-bold font-heading">EP</span>
               </div>
               <span className="font-heading font-bold text-2xl tracking-tight">
-                ELITE<span className="text-accent">PAINTERS</span>
+                ELITE<span className="text-[#F59E0B]">PAINTERS</span>
               </span>
             </div>
-            <p className="text-white/60 leading-relaxed">
-              Premium residential and commercial painting services. We bring precision, quality, and a flawless finish to every project across the tri-state area.
+            <p className="text-white/55 leading-relaxed text-sm">
+              Orange County's #1 rated painting service. Premium residential &amp; commercial painting with 15+ years of excellence, transparency, and local pride.
             </p>
-            <div className="flex gap-4">
-              {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
+            {/* Stars */}
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B]" />
+                ))}
+              </div>
+              <span className="text-white/60 text-sm">4.9 · 500+ Reviews</span>
+            </div>
+            <div className="flex gap-3">
+              {[Facebook, Instagram, Youtube, Linkedin].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
-                  className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-all duration-300"
+                  className="w-9 h-9 bg-white/8 rounded-full flex items-center justify-center hover:bg-[#F59E0B] hover:text-[#0A192F] transition-all duration-300 text-white/60"
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon className="w-4 h-4" />
                 </a>
               ))}
             </div>
           </div>
 
+          {/* Services col */}
           <div>
-            <h4 className="text-xl font-heading font-bold mb-8 text-accent">Our Services</h4>
-            <ul className="space-y-4 text-white/60">
-              <li><a href="#services" className="hover:text-white transition-colors">Interior Painting</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Exterior Painting</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Commercial Painting</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Cabinet Refinishing</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Drywall Repair</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Pressure Washing</a></li>
+            <h4 className="text-base font-heading font-bold mb-6 text-[#F59E0B] uppercase tracking-widest">Our Services</h4>
+            <ul className="space-y-3 text-white/55 text-sm">
+              {['Interior Painting', 'Exterior Painting', 'Commercial Painting', 'Cabinet Refinishing', 'Drywall Repair', 'Pressure Washing'].map((s) => (
+                <li key={s}>
+                  <a href="#services" className="hover:text-white hover:pl-1 transition-all duration-200 flex items-center gap-1">
+                    <span className="text-[#F59E0B] text-xs">›</span> {s}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Service areas col */}
           <div>
-            <h4 className="text-xl font-heading font-bold mb-8 text-accent">Quick Links</h4>
-            <ul className="space-y-4 text-white/60">
-              <li><a href="#about" className="hover:text-white transition-colors">About Our Company</a></li>
-              <li><a href="#projects" className="hover:text-white transition-colors">Our Portfolio</a></li>
-              <li><a href="#process" className="hover:text-white transition-colors">Our Process</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors">FAQs</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xl font-heading font-bold mb-8 text-accent">Service Areas</h4>
-            <div className="grid grid-cols-2 gap-4 text-white/60 text-sm">
-              <ul className="space-y-2">
-                <li>Irvine, CA</li>
-                <li>Newport Beach, CA</li>
-                <li>Laguna Beach, CA</li>
-                <li>Huntington Beach, CA</li>
-              </ul>
-              <ul className="space-y-2">
-                <li>Anaheim, CA</li>
-                <li>Mission Viejo, CA</li>
-                <li>Costa Mesa, CA</li>
-                <li>San Clemente, CA</li>
-              </ul>
+            <h4 className="text-base font-heading font-bold mb-6 text-[#F59E0B] uppercase tracking-widest">Service Areas</h4>
+            <div className="grid grid-cols-2 gap-y-3 gap-x-2 text-white/55 text-sm">
+              {serviceAreas.map((area) => (
+                <span key={area} className="flex items-center gap-1">
+                  <span className="text-[#F59E0B] text-xs">📍</span> {area}
+                </span>
+              ))}
             </div>
-            <div className="mt-8 p-4 bg-white/5 rounded-2xl border border-white/10">
-              <p className="text-xs font-bold uppercase tracking-widest text-accent mb-2">Need an Estimate?</p>
-              <p className="text-lg font-heading font-bold">(800) 555-0123</p>
+          </div>
+
+          {/* Contact col */}
+          <div>
+            <h4 className="text-base font-heading font-bold mb-6 text-[#F59E0B] uppercase tracking-widest">Contact</h4>
+            <ul className="space-y-4 text-white/55 text-sm">
+              <li>
+                <a href="tel:7145550123" className="flex items-start gap-3 hover:text-white transition-colors">
+                  <Phone className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-white font-semibold">(714) 555-0123</p>
+                    <p className="text-white/40 text-xs">Mon–Sat, 8am–6pm</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:hello@elitepainters.com" className="flex items-start gap-3 hover:text-white transition-colors">
+                  <Mail className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
+                  hello@elitepainters.com
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
+                <span>456 Spectrum Center Dr<br />Irvine, CA 92618</span>
+              </li>
+            </ul>
+
+            <div className="mt-7 p-4 bg-[#F59E0B]/10 rounded-2xl border border-[#F59E0B]/20">
+              <p className="text-xs font-bold uppercase tracking-widest text-[#F59E0B] mb-1">Free Estimate</p>
+              <p className="text-lg font-heading font-bold text-white">(714) 555-0123</p>
+              <p className="text-white/40 text-xs mt-0.5">Response within 2 hours</p>
             </div>
           </div>
         </div>
 
-        <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white/40 text-sm">
-            © 2026 Elite Painters LLC. All rights reserved. Licensed & Insured.
+        {/* Bottom bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/35 text-sm text-center md:text-left">
+            © 2026 Elite Painters LLC. All rights reserved. Licensed &amp; Insured · CSLB #1098234
           </p>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={scrollToTop}
-            className="bg-white/5 hover:bg-accent hover:text-primary rounded-full"
-          >
-            <ArrowUp className="w-5 h-5" />
-          </Button>
+          <div className="flex items-center gap-4">
+            <a href="#" className="text-white/35 hover:text-white text-xs transition-colors">Privacy Policy</a>
+            <a href="#" className="text-white/35 hover:text-white text-xs transition-colors">Terms</a>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={scrollToTop}
+              className="bg-white/8 hover:bg-[#F59E0B] hover:text-[#0A192F] rounded-full w-9 h-9 text-white/50 transition-all"
+            >
+              <ArrowUp className="w-4 h-4" />
+            </Button>
+          </div>
         </div>
       </div>
     </footer>

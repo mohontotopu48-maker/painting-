@@ -1,78 +1,103 @@
-import React from 'react';
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { CheckCircle2, Star } from "lucide-react";
+import { CheckCircle2, Star, Phone, Send } from "lucide-react";
 
-export default function QuoteModal({ children }: { children: React.ReactNode }) {
+interface QuoteModalProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+}
+
+export default function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        {children}
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden border-none">
-        <div className="bg-primary p-8 text-white">
-          <div className="flex items-center gap-1 mb-2">
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="sm:max-w-[520px] p-0 overflow-hidden border-none shadow-2xl">
+        {/* Header */}
+        <div className="bg-gradient-to-br from-[#0A192F] to-[#112240] p-8 text-white">
+          <div className="flex items-center gap-1 mb-3">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+              <Star key={i} className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B]" />
             ))}
+            <span className="text-white/70 text-xs ml-2">500+ 5-Star Reviews</span>
           </div>
           <DialogHeader>
-            <DialogTitle className="text-3xl font-heading font-bold text-white">Get Your Free Estimate</DialogTitle>
-            <DialogDescription className="text-white/80 text-lg">
-              Professional painting services at competitive prices. No obligation.
+            <DialogTitle className="text-3xl font-bold text-white leading-tight">
+              Get Your Free Estimate
+            </DialogTitle>
+            <DialogDescription className="text-white/75 text-base mt-1">
+              Expert painting services. No obligation. Response within 2 hours.
             </DialogDescription>
           </DialogHeader>
         </div>
-        <div className="p-8 space-y-6 bg-white">
+
+        {/* Form */}
+        <div className="p-8 space-y-5 bg-white">
           <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="name">Full Name</Label>
-              <Input id="name" placeholder="John Doe" className="bg-slate-50" />
+            <div className="space-y-1.5">
+              <Label htmlFor="modal-name" className="font-semibold text-sm">Full Name *</Label>
+              <Input id="modal-name" placeholder="John Doe" className="bg-slate-50 border-slate-200" />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="phone">Phone Number</Label>
-              <Input id="phone" placeholder="(555) 000-0000" className="bg-slate-50" />
+            <div className="space-y-1.5">
+              <Label htmlFor="modal-phone" className="font-semibold text-sm">Phone Number *</Label>
+              <Input id="modal-phone" placeholder="(714) 555-0123" className="bg-slate-50 border-slate-200" />
             </div>
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">Email Address</Label>
-            <Input id="email" type="email" placeholder="john@example.com" className="bg-slate-50" />
+
+          <div className="space-y-1.5">
+            <Label htmlFor="modal-email" className="font-semibold text-sm">Email Address *</Label>
+            <Input id="modal-email" type="email" placeholder="john@example.com" className="bg-slate-50 border-slate-200" />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="service">Service Needed</Label>
-            <select className="w-full h-10 px-3 rounded-md border border-input bg-slate-50 text-sm">
+
+          <div className="space-y-1.5">
+            <Label htmlFor="modal-service" className="font-semibold text-sm">Service Needed</Label>
+            <select
+              id="modal-service"
+              className="w-full h-10 px-3 rounded-md border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0A192F]"
+            >
               <option>Interior Painting</option>
               <option>Exterior Painting</option>
               <option>Commercial Painting</option>
               <option>Cabinet Painting</option>
-              <option>Other</option>
+              <option>Drywall Repair</option>
+              <option>Pressure Washing</option>
+              <option>Other / Not Sure</option>
             </select>
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="message">Project Details (Optional)</Label>
-            <Textarea id="message" placeholder="Tell us about your project..." className="bg-slate-50 min-h-[100px]" />
+
+          <div className="space-y-1.5">
+            <Label htmlFor="modal-message" className="font-semibold text-sm">Project Details (Optional)</Label>
+            <Textarea
+              id="modal-message"
+              placeholder="Tell us about your project — size, timeline, any special requests..."
+              className="bg-slate-50 border-slate-200 min-h-[90px] resize-none"
+            />
           </div>
-          <Button className="w-full bg-accent hover:bg-gold-600 text-primary font-bold py-6 text-lg shadow-xl shadow-accent/20">
-            Submit Request
+
+          <Button className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-[#0A192F] font-bold py-6 text-lg shadow-xl shadow-amber-200 rounded-xl gap-2 mt-2">
+            <Send className="w-4 h-4" />
+            Submit Request — It's Free!
           </Button>
-          <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground pt-2">
-            <div className="flex items-center gap-1">
-              <CheckCircle2 className="w-3 h-3 text-green-500" />
-              <span>Licensed & Insured</span>
+
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-slate-500 pt-1">
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-green-500" />
+              <span>Licensed &amp; Insured</span>
             </div>
-            <div className="flex items-center gap-1">
-              <CheckCircle2 className="w-3 h-3 text-green-500" />
-              <span>Fast Response</span>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-green-500" />
+              <span>No Obligation</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Phone className="w-3.5 h-3.5 text-green-500" />
+              <span>We respond in 2hrs</span>
             </div>
           </div>
         </div>
